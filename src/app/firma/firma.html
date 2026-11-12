@@ -1,0 +1,29 @@
+<div class="signature-container">
+    <div class="header">
+        <h3>Firma de Remito</h3>
+        <input type="text" [(ngModel)]="remitoId" placeholder="N° de Remito (ej. REM-001)" class="input-remito" />
+    </div>
+
+    <div class="canvas-wrapper">
+        <canvas #sigCanvas (pointerdown)="onPointerDown($event)" (pointermove)="onPointerMove($event)"
+            (pointerup)="onPointerUp()" (pointerleave)="onPointerUp()"></canvas>
+    </div>
+
+    <div class="status-bar" [class.connected]="isConnected()">
+        Estado USB: {{ statusMessage() }}
+    </div>
+
+    <div class="actions">
+        <button type="button" (click)="connectSerial()" class="btn btn-usb">
+            {{ isConnected() ? 'Reconectar USB' : 'Conectar USB OTG' }}
+        </button>
+
+        <button type="button" (click)="clearCanvas()" class="btn btn-clear">
+            Limpiar
+        </button>
+
+        <button type="button" (click)="sendSignature()" [disabled]="!isConnected() || isEmpty()" class="btn btn-send">
+            Enviar Firma
+        </button>
+    </div>
+</div>

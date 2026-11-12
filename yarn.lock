@@ -160,6 +160,13 @@
   dependencies:
     tslib "^2.3.0"
 
+"@angular/service-worker@^22.2.0":
+  version "22.2.6"
+  resolved "https://registry.yarnpkg.com/@angular/service-worker/-/service-worker-22.2.6.tgz#c4c2c5dcb1a91ff8b40e913868372688eb656e51"
+  integrity sha512-D+S8/Y0KmOXJI3kkMMBGoOWBcwIVcWEeCRwvZ4gK56iQETr2cVQN7+b0d4/2sMMGST+5OkbMh1WlHoXAT6jUqQ==
+  dependencies:
+    tslib "^2.3.0"
+
 "@asamuzakjp/css-color@^7.1.3":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@asamuzakjp/css-color/-/css-color-7.2.0.tgz#0342341ee893c0664047f45ab18b99abb3d10447"
